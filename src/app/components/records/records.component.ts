@@ -32,7 +32,7 @@ export class RecordsComponent implements OnInit{
     this.getBestsParticipants()
   }
 
-  getBestsParticipants(){
+  getBestsParticipants() {
     this._participant.getAllParticipants().subscribe((data: any) => {
       if (data && data.length > 0) {
         const participantsByCenter: { [key: number]: Participant } = {};
@@ -44,11 +44,14 @@ export class RecordsComponent implements OnInit{
           }
         });
         this.dataSource = new MatTableDataSource(Object.values(participantsByCenter));
-        this.loadPaginator();
 
+        setTimeout(()=>{
+          this.loadPaginator()
+        },200)
       }
     });
   }
+
   getAllCenters(){
     this._centerService.getAllCenters().subscribe((data:any)=>{
       this.centers=data
