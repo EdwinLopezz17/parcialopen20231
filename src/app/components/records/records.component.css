@@ -1,0 +1,68 @@
+
+.container {
+  width: 90%;
+  margin: 2rem auto;
+}
+
+.filter-input {
+  width: 100%;
+}
+
+.mat-table {
+  width: 100%;
+  table-layout: auto;
+  border-collapse: collapse;
+}
+
+th.mat-header-cell,
+td.mat-cell {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 10px;
+  text-align: center;
+}
+
+tr.mat-row:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+th.mat-header-cell {
+  background-color: #eee;
+  font-weight: bold;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+button.mat-button {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.mat-paginator {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  padding: 10px 0;
+}
+
+.mat-paginator .mat-paginator-range-label,
+.mat-paginator .mat-paginator-page-size-label,
+.mat-paginator .mat-paginator-page-size,
+.mat-paginator .mat-paginator-page-size-label {
+  font-size: 14px;
+}
+
+td.mat-cell,
+th.mat-header-cell {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.table-image {
+  max-width: 100px;
+  height: auto;
+}

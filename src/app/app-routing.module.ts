@@ -6,8 +6,9 @@ import {RecordsComponent} from "./components/records/records.component";
 import {PageNotFoundComponent} from "./components/page-not-found/page-not-found.component";
 
 const routes: Routes = [
+  {path: '',redirectTo:'home', pathMatch:'full'},
   {path: 'home', component:HomeComponent},
-  {path: 'records', component:RecordsComponent},
+  {path: 'marathon/records', component:RecordsComponent},
 
   {path: '**', component:PageNotFoundComponent}
 ];

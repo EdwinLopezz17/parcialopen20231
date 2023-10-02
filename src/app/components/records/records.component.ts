@@ -43,7 +43,6 @@ export class RecordsComponent implements OnInit{
             participantsByCenter[participant.centerId] = participant;
           }
         });
-        console.log(Object.values(participantsByCenter))
         this.dataSource = new MatTableDataSource(Object.values(participantsByCenter));
         this.loadPaginator();
 
@@ -58,7 +57,7 @@ export class RecordsComponent implements OnInit{
 
   getNameCenterById(id: number){
     const center = this.centers.find((center: Center) => center.id == id);
-    return center ? center.name : undefined;
+    return center ? center.name : "";
   }
 
   loadPaginator() {
